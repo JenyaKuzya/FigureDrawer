@@ -9,15 +9,14 @@ namespace FigureDraw
 {
     public class Line : Figure
     {
-        public int x2, y2;
-        public Line(int z, int q, int x, int y, Pen pen) : base(x, y, pen)
+        protected Point pt2;
+        public Line(Point p1, Point p2, Pen pen) : base(p1, pen)
         {
-            x2 = z;
-            y2 = q;
+            pt2 = p2;
         }
         public override void Draw(Graphics g)
         {
-            g.DrawLine(mypen, x1, y1, x2, y2);
+            g.DrawLine(mypen, pt1.x, pt1.y, pt2.x, pt2.y);
         }
     }
 }

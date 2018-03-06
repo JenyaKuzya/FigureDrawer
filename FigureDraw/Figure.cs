@@ -9,12 +9,11 @@ namespace FigureDraw
 {
     public class Figure
     {
-        public int x1, y1;
-        public Pen mypen;
-        public Figure(int x, int y, Pen pen)
+        protected Point pt1;
+        protected Pen mypen;
+        public Figure(Point p1, Pen pen)
         {
-            x1 = x;
-            y1 = y;
+            pt1 = p1;
             mypen = pen;
         }
         public virtual void Draw(Graphics g) { }

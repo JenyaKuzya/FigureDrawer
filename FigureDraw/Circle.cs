@@ -9,13 +9,13 @@ namespace FigureDraw
 {
     public class Circle : Square
     {
-        public Circle(int x, int y, int height, Pen pen)
-            : base(height, x, y, pen)
+        public Circle(Point p1, int height, Pen pen)
+            : base(p1, height, pen)
         {
         }
         public override void Draw(Graphics g)
         {
-            g.DrawEllipse(mypen, x1, y1, h, h);
+            g.DrawEllipse(mypen, pt1.x, pt1.y, h, h);
         }
     }
 }

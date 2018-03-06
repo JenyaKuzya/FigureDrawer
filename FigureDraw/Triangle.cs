@@ -10,17 +10,16 @@ namespace FigureDraw
 {
     public class Triangle : Line
     {
-        public int x3, y3;
-        public Triangle(int n, int m, int z, int q, int x, int y, Pen pen) : base(z, q, x, y, pen)
+        protected Point pt3;
+        public Triangle(Point p1, Point p2, Point p3, Pen pen) : base(p1, p2, pen)
         {
-            x3 = n;
-            y3 = m;
+            pt3 = p3;
         }
         public override void Draw(Graphics g)
         {
-            g.DrawLine(mypen, x1, y1, x2, y2);
-            g.DrawLine(mypen, x2, y2, x3, y3);
-            g.DrawLine(mypen, x3, y3, x1, y1);
+            g.DrawLine(mypen, pt1.x, pt1.y, pt2.x, pt2.y);
+            g.DrawLine(mypen, pt2.x, pt2.y, pt3.x, pt3.y);
+            g.DrawLine(mypen, pt3.x, pt3.y, pt1.x, pt1.y);
         }
 
     }

@@ -9,12 +9,12 @@ namespace FigureDraw
 {
     public class Ellipse : Rectangle
     {
-        public Ellipse(int x, int y, int z, int q, Pen pen)
-            : base(x, y, z, q, pen)
+        public Ellipse(Point p1, int width, int height, Pen pen)
+            : base(p1, width, height, pen)
         { }
         public override void Draw(Graphics g)
         {
-            g.DrawEllipse(mypen, x1, y1, w, h);
+            g.DrawEllipse(mypen, pt1.x, pt1.y, w, h);
         }
     }
 }
