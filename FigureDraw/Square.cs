@@ -7,12 +7,14 @@ using System.Drawing;
 
 namespace FigureDraw
 {
-    public class Square : Figure
+    public class Square : Rectangle
     {
-        protected int h;
-        public Square(Point p1, int height, Pen pen) : base(p1, pen)
+        public Square(Point p1, int height, Pen pen) : base(p1, height, height, pen)
         {
-            h = height;
+        }
+        public Square(Point p1, Point p2, Pen pen) : base(p1, p2, pen)
+        {
+            w = h;
         }
         public override void Draw(Graphics g)
         {

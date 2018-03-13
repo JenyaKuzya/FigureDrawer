@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace FigureDraw
 {
-    public class Figure
+    public abstract class Figure
     {
         protected Point pt1;
         protected Pen mypen;
@@ -16,6 +16,6 @@ namespace FigureDraw
             pt1 = p1;
             mypen = pen;
         }
-        public virtual void Draw(Graphics g) { }
+        public abstract void Draw(Graphics g);
     }
 }
