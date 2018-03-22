@@ -18,7 +18,7 @@ namespace FigureDraw
         }
         public override void Draw(Graphics g)
         {
-            g.DrawRectangle(mypen, pt1.x, pt1.y, h, h);
+            g.DrawRectangle(mypen, pt1.X, pt1.Y, h, h);
         }
     }
 }

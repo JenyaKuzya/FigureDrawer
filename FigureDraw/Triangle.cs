@@ -17,9 +17,9 @@ namespace FigureDraw
         }
         public override void Draw(Graphics g)
         {
-            g.DrawLine(mypen, pt1.x, pt1.y, pt2.x, pt2.y);
-            g.DrawLine(mypen, pt2.x, pt2.y, pt3.x, pt3.y);
-            g.DrawLine(mypen, pt3.x, pt3.y, pt1.x, pt1.y);
+            g.DrawLine(mypen, pt1.X, pt1.Y, pt2.X, pt2.Y);
+            g.DrawLine(mypen, pt2.X, pt2.Y, pt3.X, pt3.Y);
+            g.DrawLine(mypen, pt3.X, pt3.Y, pt1.X, pt1.Y);
         }
 
     }

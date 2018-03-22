@@ -18,7 +18,7 @@ namespace FigureDraw
         }
         public override void Draw(Graphics g)
         {
-            g.DrawEllipse(mypen, pt1.x, pt1.y, h, h);
+            g.DrawEllipse(mypen, pt1.X, pt1.Y, h, h);
         }
     }
 }

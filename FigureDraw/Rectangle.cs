@@ -19,12 +19,12 @@ namespace FigureDraw
         }
         public Rectangle(Point p1, Point p2, Pen pen) : base(p1, pen)
         {
-            h = Math.Abs(p1.y - p2.y);
-            w = Math.Abs(p1.x - p2.x);
+            h = Math.Abs(p1.Y - p2.Y);
+            w = Math.Abs(p1.X - p2.X);
         }
         public override void Draw(Graphics g)
         {
-            g.DrawRectangle(mypen, pt1.x, pt1.y, w, h);
+            g.DrawRectangle(mypen, pt1.X, pt1.Y, w, h);
         }
     }
 }
