@@ -9,16 +9,17 @@ namespace FigureDraw
 {
     public class Circle : Square
     {
-        public Circle(Point p1, int height, Pen pen)
-            : base(p1, height, pen)
+        public Circle() : base()
         {
         }
+
         public Circle(Point p1, Point p2, Pen pen) : base(p1, p2, pen)
         {
         }
+
         public override void Draw(Graphics g)
         {
-            g.DrawEllipse(mypen, pt1.X, pt1.Y, h, h);
+            g.DrawEllipse(mypen, Math.Min(pt1.X, pt2.X), Math.Min(pt1.Y, pt2.Y), Math.Max(Math.Abs(pt1.X - pt2.X), Math.Abs(pt1.Y - pt2.Y)), Math.Max(Math.Abs(pt1.X - pt2.X), Math.Abs(pt1.Y - pt2.Y)));
         }
     }
 }

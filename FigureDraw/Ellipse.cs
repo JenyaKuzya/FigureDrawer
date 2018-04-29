@@ -9,16 +9,17 @@ namespace FigureDraw
 {
     public class Ellipse : Rectangle
     {
-        public Ellipse(Point p1, int width, int height, Pen pen)
-            : base(p1, width, height, pen)
+        public Ellipse() : base()
         {
         }
+
         public Ellipse(Point p1, Point p2, Pen pen) : base(p1, p2, pen)
         {
         }
+
         public override void Draw(Graphics g)
         {
-            g.DrawEllipse(mypen, pt1.X, pt1.Y, w, h);
+            g.DrawEllipse(mypen, Math.Min(pt1.X, pt2.X), Math.Min(pt1.Y, pt2.Y), Math.Abs(pt1.X - pt2.X), Math.Abs(pt1.Y - pt2.Y));
         }
     }
 }

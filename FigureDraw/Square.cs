@@ -9,16 +9,17 @@ namespace FigureDraw
 {
     public class Square : Rectangle
     {
-        public Square(Point p1, int height, Pen pen) : base(p1, height, height, pen)
+        public Square() : base()
         {
         }
+
         public Square(Point p1, Point p2, Pen pen) : base(p1, p2, pen)
         {
-            w = h;
         }
+
         public override void Draw(Graphics g)
         {
-            g.DrawRectangle(mypen, pt1.X, pt1.Y, h, h);
+            g.DrawRectangle(mypen, Math.Min(pt1.X, pt2.X), Math.Min(pt1.Y, pt2.Y), Math.Max(Math.Abs(pt1.X - pt2.X), Math.Abs(pt1.Y - pt2.Y)), Math.Max(Math.Abs(pt1.X - pt2.X), Math.Abs(pt1.Y - pt2.Y)));
         }
     }
 }

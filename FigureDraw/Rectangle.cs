@@ -9,22 +9,17 @@ namespace FigureDraw
 {
     public class Rectangle : Figure
     {
-        protected int w;
-        protected int h;
-        public Rectangle(Point p1, int width, int height, Pen pen)
-            : base(p1, pen)
+        public Rectangle() : base()
         {
-            w = width;
-            h = height;
         }
-        public Rectangle(Point p1, Point p2, Pen pen) : base(p1, pen)
+
+        public Rectangle(Point p1, Point p2, Pen pen) : base(p1, p2, pen)
         {
-            h = Math.Abs(p1.Y - p2.Y);
-            w = Math.Abs(p1.X - p2.X);
         }
+
         public override void Draw(Graphics g)
         {
-            g.DrawRectangle(mypen, pt1.X, pt1.Y, w, h);
+            g.DrawRectangle(mypen, Math.Min(pt1.X, pt2.X), Math.Min(pt1.Y, pt2.Y), Math.Abs(pt1.X - pt2.X), Math.Abs(pt1.Y - pt2.Y));
         }
     }
 }
